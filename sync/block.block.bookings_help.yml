@@ -1,0 +1,22 @@
+uuid: 8831bbea-f337-4498-9b11-5cf51af86931
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bookings
+_core:
+  default_config_hash: h3iNRBREcIcMPxsZ5UVcXlXFHz0b6tagwa9hGGwFASU
+id: bookings_help
+theme: bookings
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

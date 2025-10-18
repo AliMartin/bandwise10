@@ -1,0 +1,17 @@
+uuid: 7e7849b7-12a8-4ff5-9339-5104c91736ff
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Contact
+type: contact
+description: 'Add a <em>contact</em> to the website. This could be a client, company or venue.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

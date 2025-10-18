@@ -1,0 +1,84 @@
+// Bootstrap variables (overrides).
+$form-text-margin-top: 0;
+$legend-font-size: 1rem;
+$table-cell-padding-x: .75rem;
+
+
+// Colours
+$white:         #ffffff !default;
+$black:         #060606 !default;
+$light:         #eae2cc !default;
+$dark:          #2a1d0b !default;
+$green:         #13983e !default;
+$yellow:        #ebc316 !default;
+$red:           #ed0938 !default;
+$blue:          #3c4f5e !default;
+$olive:         #2f3b39 !default;
+$info:          #3b4d0e !default;
+$accent1:       #632c22 !default;
+$accent2:       #965c33 !default;
+$accent3:       #b2aa82 !default;
+$gray:          #30353a !default;
+
+$primary: $olive;
+$secondary: $blue;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+// $light: $white;
+
+$theme-colors: (
+  "light":      $white,
+  "dark":       $dark,
+  "black":      $black,
+  "primary":    $olive,
+  "secondary":  $blue,
+  "info":       $info,
+  "success":    $success,
+  "warning":    $yellow,
+  "danger":     $red,
+  "accent1":    $accent1,
+  "accent2":    $accent2,
+  "accent3":    $accent3,
+);
+
+
+// Fonts
+// $font-family-sans-serif: "Inter", sans-serif;
+// $font-family-base: $font-family-sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-weight-normal: 300;
+$font-weight-bold: 700;
+$body-color: $black;
+
+$headings-font-family: "Inter", sans-serif;
+$headings-font-weight: 200;
+$headings-color: $black;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 1.75;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.25;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
+
+
+// Hyperlinks
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $secondary;
+$link-hover-decoration: none;
+
+
+// Image border radius
+$border-radius-img: 10px;
+
+
+// Border radius
+$border-radius: 12px;
+
+
+// Border thicknesses
+$border-thick: 6px;
+$border-thin: 4px;

@@ -1,0 +1,14 @@
+uuid: 66d08f22-67ce-4b39-b9cd-737e0afdca25
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.band_admin
+  module:
+    - user
+id: user_remove_role_action.band_admin
+label: 'Remove the Band admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: band_admin

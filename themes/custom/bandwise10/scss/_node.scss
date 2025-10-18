@@ -1,0 +1,26 @@
+body {
+  background-color: $gray-200;
+
+  .region-content {
+    background-color: $white;
+    padding: 24px;
+    border-radius: $border-radius;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: rgba(20, 45, 82, 0.02) 0px 1px 2px 0px,
+                rgba(20, 45, 82, 0.03) 0px 3px 4px 0px,
+                rgba(20, 45, 82, 0.04) 0px 5px 8px 0px;
+  }
+}
+
+
+details.card {
+  border: inherit;
+}
+
+.card-body {
+  .field__label {
+    width: 130px;
+  }
+}
+
+ 

@@ -1,0 +1,27 @@
+footer {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  background-color: $secondary;
+  color: $white;
+
+  .region-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+#ultraluminal {
+  .text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 120px;
+    height: auto;
+  }  
+}

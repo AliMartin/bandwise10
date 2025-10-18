@@ -1,0 +1,30 @@
+uuid: 134dbcd8-36ac-4cbc-b1fa-16627ceea11c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.show
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: band_admin
+label: 'Band admin'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create terms in show'
+  - 'delete terms in show'
+  - 'edit terms in show'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
