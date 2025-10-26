@@ -1,5 +1,5 @@
 uuid: 9840db4b-9854-4858-b6a6-17447683aafb
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   theme:
@@ -9,7 +9,7 @@ _core:
 id: bandwise10_page_title
 theme: bandwise10
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

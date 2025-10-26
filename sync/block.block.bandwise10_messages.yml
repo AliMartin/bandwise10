@@ -1,5 +1,5 @@
 uuid: cd87d091-f7fc-490b-ae67-ac500550710e
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ _core:
 id: bandwise10_messages
 theme: bandwise10
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

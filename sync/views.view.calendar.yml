@@ -386,6 +386,10 @@ display:
       menu:
         type: normal
         title: Calendar
+        description: ''
+        weight: -46
+        enabled: true
+        expanded: false
         menu_name: main
         parent: ''
     cache_metadata:

@@ -1,6 +1,10 @@
 body {
   background-color: $gray-200;
 
+  main {
+    margin-bottom: 90px;
+  }
+
   .region-content {
     background-color: $white;
     padding: 24px;

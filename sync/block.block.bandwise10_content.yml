@@ -1,5 +1,5 @@
 uuid: 4cedf29f-721d-48e1-8578-c5d764697f21
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ _core:
 id: bandwise10_content
 theme: bandwise10
 region: content
-weight: -1
+weight: 1
 provider: null
 plugin: system_main_block
 settings:

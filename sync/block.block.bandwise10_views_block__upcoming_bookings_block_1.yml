@@ -1,4 +1,4 @@
-uuid: 2e6edb18-816d-49ef-866e-3cd9d031a7ea
+uuid: 78bcf6e3-0ca6-4bfa-8404-338da85ec248
 langcode: en-gb
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - bookings
-id: bookings_views_block__upcoming_bookings_block_1
-theme: bookings
+    - bandwise10
+id: bandwise10_views_block__upcoming_bookings_block_1
+theme: bandwise10
 region: content
 weight: 0
 provider: null

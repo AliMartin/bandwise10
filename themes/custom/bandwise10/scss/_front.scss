@@ -1,0 +1,37 @@
+#front-page-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+
+  .fp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 150px;
+    height: 150px;
+    background-color: $accent2;
+    border-radius: $border-radius;
+    color: $white;
+    text-align: center;
+
+    &:hover {
+      background-color: $secondary;
+    }
+
+    a {
+      color: $white;
+      text-decoration: inherit;
+      font-weight: $font-weight-bold;
+    }
+
+    i {
+      display: block;
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -12301,7 +12301,7 @@ a > .ck-content code {
   overflow-y: auto;
 }
 .ck-content header {
-  background-color: #2f3b39;
+  background-color: #3c4f5e;
   color: #ffffff;
   margin-bottom: 60px;
 }
@@ -12311,10 +12311,27 @@ a > .ck-content code {
 .ck-content header .navbar-brand img {
   height: 80px;
 }
+.ck-content header .upper-container .region-nav-additional {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.ck-content header .upper-container .region-nav-additional input {
+  font-size: 14px;
+}
+.ck-content header .upper-container .region-nav-additional .form-actions input {
+  background-color: #242f38;
+}
+.ck-content header .upper-container .region-nav-additional .form-actions input:hover {
+  background-color: #0c1013;
+}
 .ck-content footer {
   padding-top: 60px;
   padding-bottom: 120px;
-  background-color: #3c4f5e;
+  background-color: #060606;
   color: #ffffff;
 }
 .ck-content footer .region-footer {
@@ -12334,8 +12351,27 @@ a > .ck-content code {
   width: 120px;
   height: auto;
 }
+.ck-content header nav ul.navbar-nav li.nav-item a {
+  color: #ffffff;
+  padding: 0 !important;
+  margin-left: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.ck-content header nav ul.navbar-nav li.nav-item a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.ck-content header nav .lower-container ul.navbar-nav a {
+  font-weight: 700;
+}
+.ck-content header nav svg {
+  margin-right: 3px;
+}
 .ck-content body {
   background-color: #e9ecef;
+}
+.ck-content body main {
+  margin-bottom: 90px;
 }
 .ck-content body .region-content {
   background-color: #ffffff;
@@ -12350,6 +12386,39 @@ a > .ck-content code {
 .ck-content .card-body .field__label, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity .field__label, .ck-content .media-library-selection .media-library-item.media-library-item--grid > div .field__label,
 .ck-content .media-library-selection .media-library-item.media-library-item--grid article .field__label {
   width: 130px;
+}
+.ck-content #front-page-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
+.ck-content #front-page-buttons .fp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 150px;
+  height: 150px;
+  background-color: #965c33;
+  border-radius: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+.ck-content #front-page-buttons .fp-button:hover {
+  background-color: #3c4f5e;
+}
+.ck-content #front-page-buttons .fp-button a {
+  color: #ffffff;
+  text-decoration: inherit;
+  font-weight: 700;
+}
+.ck-content #front-page-buttons .fp-button i {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=ck5style.css.map */

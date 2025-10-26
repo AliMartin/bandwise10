@@ -1,5 +1,5 @@
 header {
-  background-color: $primary;
+  background-color: $blue;
   color: $white;
   margin-bottom: 60px;
 
@@ -9,5 +9,25 @@ header {
 
   .navbar-brand img {
     height: 80px;
+  }
+
+  .upper-container .region-nav-additional {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    input {
+      font-size: 14px;
+    }
+
+    .form-actions input {
+      background-color: $blue-700;
+      &:hover {
+        background-color: $blue-900;
+      }
+    }
   }
 }
