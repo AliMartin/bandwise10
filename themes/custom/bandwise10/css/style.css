@@ -13440,6 +13440,7 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   border-radius: 12px;
   color: #ffffff;
   text-align: center;
+  /* */
 }
 #front-page-buttons .fp-button:hover {
   background-color: #3c4f5e;

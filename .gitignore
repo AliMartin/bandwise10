@@ -31,7 +31,9 @@
 /core
 # /libraries
 /modules/contrib/*
-/themes/README.txt
+!/modules/contrib/.gitkeep
+!/modules/custom/
+!/modules/custom/*/themes/README.txt
 /themes/contrib/*
 /profiles/README.txt
 /sites/README.txt
@@ -64,3 +66,4 @@
 !/libraries/jqueryinstagramfeed/*
 !/libraries/slick/*
 !/sites/default/settings.local.php
+

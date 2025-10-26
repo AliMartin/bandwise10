@@ -12406,6 +12406,7 @@ a > .ck-content code {
   border-radius: 12px;
   color: #ffffff;
   text-align: center;
+  /* */
 }
 .ck-content #front-page-buttons .fp-button:hover {
   background-color: #3c4f5e;
