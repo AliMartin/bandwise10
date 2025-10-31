@@ -2,8 +2,6 @@ uuid: ef33ce7e-991a-469e-9b2a-0b4218a91ac8
 langcode: en-gb
 status: true
 dependencies:
-  config:
-    - node.type.booking
   module:
     - content_moderation
 _core:
@@ -61,7 +59,5 @@ type_settings:
         - published
       to: published
       weight: 1
-  entity_types:
-    node:
-      - booking
+  entity_types: {  }
   default_moderation_state: draft

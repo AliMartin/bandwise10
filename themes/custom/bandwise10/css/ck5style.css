@@ -12343,12 +12343,12 @@ a > .ck-content code {
 .ck-content #ultraluminal .text {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 11px;
+  font-size: 8px;
   line-height: 1;
   margin-bottom: 10px;
 }
 .ck-content #ultraluminal img {
-  width: 120px;
+  width: 95px;
   height: auto;
 }
 .ck-content header nav ul.navbar-nav li.nav-item a {

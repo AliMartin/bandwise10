@@ -43,6 +43,7 @@ dependencies:
     - field.field.node.booking.field_song_requests
     - field.field.node.booking.field_start_time
     - field.field.node.booking.field_venue_name
+    - field.field.node.booking.field_waiting_status
     - node.type.booking
   module:
     - text
@@ -109,4 +110,5 @@ hidden:
   field_song_requests: true
   field_start_time: true
   field_venue_name: true
+  field_waiting_status: true
   langcode: true

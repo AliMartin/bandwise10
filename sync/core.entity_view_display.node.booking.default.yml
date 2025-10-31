@@ -42,6 +42,7 @@ dependencies:
     - field.field.node.booking.field_song_requests
     - field.field.node.booking.field_start_time
     - field.field.node.booking.field_venue_name
+    - field.field.node.booking.field_waiting_status
     - node.type.booking
   module:
     - cshs
@@ -69,7 +70,7 @@ third_party_settings:
       label: Booking
       parent_name: ''
       region: content
-      weight: 1
+      weight: 3
       format_type: tabs
       format_settings:
         classes: ''
@@ -80,7 +81,6 @@ third_party_settings:
         width_breakpoint: 768
     group_enquiry:
       children:
-        - field_booking_agent
         - field_enquiry_source
         - field_enquiry_date
       label: Enquiry
@@ -302,7 +302,15 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  field_booking_status:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_client_name:
     type: entity_reference_label
@@ -580,12 +588,19 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_waiting_status:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
 hidden:
   body: true
-  field_booking_status: true
   langcode: true
