@@ -9,7 +9,6 @@ dependencies:
     - system.menu.main
   module:
     - calendar_view
-    - content_moderation
     - cshs
     - datetime
     - node
@@ -387,7 +386,7 @@ display:
         type: normal
         title: Calendar
         description: ''
-        weight: -46
+        weight: -45
         enabled: true
         expanded: false
         menu_name: main

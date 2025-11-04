@@ -9,14 +9,14 @@
 [data-bs-theme=light] {
   --bs-blue: #3c4f5e;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #8f5fa8;
   --bs-pink: #d63384;
   --bs-red: #ed0938;
-  --bs-orange: #fd7e14;
+  --bs-orange: #c1571c;
   --bs-yellow: #ebc316;
   --bs-green: #13983e;
   --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
+  --bs-cyan: #2ea5a0;
   --bs-black: #060606;
   --bs-white: #ffffff;
   --bs-gray: #6c757d;
@@ -13369,6 +13369,28 @@ footer .region-footer {
   text-align: center;
 }
 
+#block-bandwise10-footertext {
+  font-size: smaller;
+  margin-bottom: 30px;
+}
+#block-bandwise10-footertext .slogan {
+  font-weight: 700;
+}
+#block-bandwise10-footertext .message {
+  margin-bottom: 10px;
+}
+#block-bandwise10-footertext .copyright {
+  margin-bottom: 10px;
+}
+#block-bandwise10-footertext a {
+  color: #ffffff;
+  text-decoration: inherit;
+}
+#block-bandwise10-footertext a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 #ultraluminal .text {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -13387,7 +13409,7 @@ header nav ul.navbar-nav li.nav-item a {
   margin-left: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-header nav ul.navbar-nav li.nav-item a:hover {
+header nav ul.navbar-nav li.nav-item a:hover, header nav ul.navbar-nav li.nav-item a.active, header nav ul.navbar-nav li.nav-item a.is-active {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
@@ -13412,6 +13434,79 @@ body .region-content {
   box-shadow: rgba(20, 45, 82, 0.02) 0px 1px 2px 0px, rgba(20, 45, 82, 0.03) 0px 3px 4px 0px, rgba(20, 45, 82, 0.04) 0px 5px 8px 0px;
 }
 
+strong {
+  font-weight: 700;
+}
+
+/*
+ * Booking status colour coding
+ * Note that this is currently done by term ID rather than a pretty text label
+ * This therefore needs to be improved
+ */
+span.booking_status {
+  display: inline-block;
+  background-color: #e9ecef;
+  color: #060606;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Initial enquiry  */
+span.booking_status.flag_17 {
+  background-color: #2ea5a0;
+  color: #ffffff;
+}
+
+/* Quoted           */
+span.booking_status.flag_89 {
+  background-color: #ebc316;
+  color: #060606;
+}
+
+/* Not proceeding   */
+span.booking_status.flag_90 {
+  background-color: #ed0938;
+  color: #ffffff;
+}
+
+/* Confirmed        */
+span.booking_status.flag_19 {
+  background-color: #13983e;
+  color: #ffffff;
+}
+
+/* Keen enquiry     */
+span.booking_status.flag_18 {
+  background-color: #c1571c;
+  color: #ffffff;
+}
+
+/* Postponed        */
+span.booking_status.flag_91 {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Cancelled        */
+span.booking_status.flag_20 {
+  background-color: #060606;
+  color: #ffffff;
+}
+
+/*
+ * Booking and line-up tables
+ * Hide H2 for show name so only band name is displayed
+ */
+td .vocabulary-show h2, td .vocabulary-show .h2 {
+  display: none;
+}
+
+table {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
 details.card, .view-media-library .media-library-views-form__rows .media-library-item--grid details.views-field-rendered-entity, .media-library-selection details.media-library-item.media-library-item--grid {
   border: inherit;
 }
@@ -13434,8 +13529,8 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   background-color: #965c33;
   border-radius: 12px;
   color: #ffffff;
@@ -13443,7 +13538,7 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   /* */
 }
 #front-page-buttons .fp-button:hover {
-  background-color: #3c4f5e;
+  background-color: #060606;
 }
 #front-page-buttons .fp-button a {
   color: #ffffff;

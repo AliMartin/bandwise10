@@ -294,7 +294,27 @@ settings:
   field_overrides:
     givenName:
       override: optional
+    additionalName:
+      override: optional
     familyName:
+      override: optional
+    organization:
+      override: optional
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    addressLine3:
+      override: optional
+    postalCode:
+      override: optional
+    sortingCode:
+      override: optional
+    dependentLocality:
+      override: optional
+    locality:
+      override: optional
+    administrativeArea:
       override: optional
   fields: {  }
 field_type: address

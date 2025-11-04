@@ -12,6 +12,29 @@ footer {
   }
 }
 
+#block-bandwise10-footertext {
+  font-size: smaller;
+  margin-bottom: 30px;
+
+  .slogan {
+    font-weight: $font-weight-bold;
+  }
+  .message {
+    margin-bottom: 10px;
+  }
+  .copyright {
+    margin-bottom: 10px;
+  }
+  a {
+    color: $white;
+    text-decoration: inherit;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
 #ultraluminal {
   .text {
     text-transform: uppercase;

@@ -24,19 +24,35 @@
   /* rtl:begin:remove */
   /* rtl:end:remove */
   @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  /*
+   * Booking status colour coding
+   * Note that this is currently done by term ID rather than a pretty text label
+   * This therefore needs to be improved
+   */
+  /* Initial enquiry  */
+  /* Quoted           */
+  /* Not proceeding   */
+  /* Confirmed        */
+  /* Keen enquiry     */
+  /* Postponed        */
+  /* Cancelled        */
+  /*
+   * Booking and line-up tables
+   * Hide H2 for show name so only band name is displayed
+   */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
   --bs-blue: #3c4f5e;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #8f5fa8;
   --bs-pink: #d63384;
   --bs-red: #ed0938;
-  --bs-orange: #fd7e14;
+  --bs-orange: #c1571c;
   --bs-yellow: #ebc316;
   --bs-green: #13983e;
   --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
+  --bs-cyan: #2ea5a0;
   --bs-black: #060606;
   --bs-white: #ffffff;
   --bs-gray: #6c757d;
@@ -12340,6 +12356,27 @@ a > .ck-content code {
   justify-content: center;
   text-align: center;
 }
+.ck-content #block-bandwise10-footertext {
+  font-size: smaller;
+  margin-bottom: 30px;
+}
+.ck-content #block-bandwise10-footertext .slogan {
+  font-weight: 700;
+}
+.ck-content #block-bandwise10-footertext .message {
+  margin-bottom: 10px;
+}
+.ck-content #block-bandwise10-footertext .copyright {
+  margin-bottom: 10px;
+}
+.ck-content #block-bandwise10-footertext a {
+  color: #ffffff;
+  text-decoration: inherit;
+}
+.ck-content #block-bandwise10-footertext a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 .ck-content #ultraluminal .text {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -12357,7 +12394,7 @@ a > .ck-content code {
   margin-left: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-.ck-content header nav ul.navbar-nav li.nav-item a:hover {
+.ck-content header nav ul.navbar-nav li.nav-item a:hover, .ck-content header nav ul.navbar-nav li.nav-item a.active, .ck-content header nav ul.navbar-nav li.nav-item a.is-active {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
@@ -12380,6 +12417,52 @@ a > .ck-content code {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: rgba(20, 45, 82, 0.02) 0px 1px 2px 0px, rgba(20, 45, 82, 0.03) 0px 3px 4px 0px, rgba(20, 45, 82, 0.04) 0px 5px 8px 0px;
 }
+.ck-content strong {
+  font-weight: 700;
+}
+.ck-content span.booking_status {
+  display: inline-block;
+  background-color: #e9ecef;
+  color: #060606;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.ck-content span.booking_status.flag_17 {
+  background-color: #2ea5a0;
+  color: #ffffff;
+}
+.ck-content span.booking_status.flag_89 {
+  background-color: #ebc316;
+  color: #060606;
+}
+.ck-content span.booking_status.flag_90 {
+  background-color: #ed0938;
+  color: #ffffff;
+}
+.ck-content span.booking_status.flag_19 {
+  background-color: #13983e;
+  color: #ffffff;
+}
+.ck-content span.booking_status.flag_18 {
+  background-color: #c1571c;
+  color: #ffffff;
+}
+.ck-content span.booking_status.flag_91 {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+.ck-content span.booking_status.flag_20 {
+  background-color: #060606;
+  color: #ffffff;
+}
+.ck-content td .vocabulary-show h2, .ck-content td .vocabulary-show .h2 {
+  display: none;
+}
+.ck-content table {
+  font-size: 12px;
+  line-height: 1.1;
+}
 .ck-content details.card, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid details.views-field-rendered-entity, .ck-content .media-library-selection details.media-library-item.media-library-item--grid {
   border: inherit;
 }
@@ -12400,8 +12483,8 @@ a > .ck-content code {
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   background-color: #965c33;
   border-radius: 12px;
   color: #ffffff;
@@ -12409,7 +12492,7 @@ a > .ck-content code {
   /* */
 }
 .ck-content #front-page-buttons .fp-button:hover {
-  background-color: #3c4f5e;
+  background-color: #060606;
 }
 .ck-content #front-page-buttons .fp-button a {
   color: #ffffff;

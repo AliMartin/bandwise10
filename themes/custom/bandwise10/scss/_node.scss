@@ -16,6 +16,50 @@ body {
   }
 }
 
+strong {
+  font-weight: $font-weight-bold;
+}
+
+/*
+ * Booking status colour coding
+ * Note that this is currently done by term ID rather than a pretty text label
+ * This therefore needs to be improved
+ */
+
+span.booking_status {
+  display: inline-block;
+  background-color: $gray-200;
+  color: $black;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Initial enquiry  */  span.booking_status.flag_17 {background-color: $cyan;     color: $white;}
+/* Quoted           */  span.booking_status.flag_89 {background-color: $yellow;   color: $black;}
+/* Not proceeding   */  span.booking_status.flag_90 {background-color: $red;      color: $white;}
+/* Confirmed        */  span.booking_status.flag_19 {background-color: $green;    color: $white;}
+/* Keen enquiry     */  span.booking_status.flag_18 {background-color: $orange;   color: $white;}
+/* Postponed        */  span.booking_status.flag_91 {background-color: $gray-600; color: $white;}
+/* Cancelled        */  span.booking_status.flag_20 {background-color: $black;    color: $white;}
+
+
+/*
+ * Booking and line-up tables
+ * Hide H2 for show name so only band name is displayed
+ */
+
+td .vocabulary-show h2 {
+  display: none;
+}
+
+
+
+table {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
 
 details.card {
   border: inherit;
