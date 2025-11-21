@@ -17,6 +17,7 @@ dependencies:
     - field.storage.node.field_show
     - node.type.booking
     - taxonomy.vocabulary.booking_status
+    - user.role.authenticated
   content:
     - 'taxonomy_term:booking_status:0fb83b65-c848-4c69-a063-0d4c37001032'
     - 'taxonomy_term:booking_status:25d8e102-c12e-4eac-b9bd-d79cfc58f2e3'
@@ -1002,7 +1003,9 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
-              reset_button_always_show: false
+              reset_button_always_show: true
+              autosubmit_breakpoint: ''
+              auto_submit_sort_only: false
             filter:
               field_booking_status_target_id:
                 plugin_id: bef
@@ -1015,13 +1018,21 @@ display:
                   collapsible_disable_automatic_open: false
                   is_secondary: false
                   hide_label: false
+                  field_classes: ''
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                 select_all_none: true
                 select_all_none_nested: false
                 display_inline: true
+                soft_limit: 0
+                soft_limit_label_less: 'Show less'
+                soft_limit_label_more: 'Show more'
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -1241,7 +1252,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_band_size'
         - 'config:field.storage.node.field_booking_status'
@@ -1276,7 +1287,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_band_size'
         - 'config:field.storage.node.field_booking_status'
@@ -1305,7 +1316,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_band_size'
         - 'config:field.storage.node.field_booking_status'

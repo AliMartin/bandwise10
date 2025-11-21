@@ -1,25 +1,25 @@
-uuid: ad3832b6-cb6a-4344-bd51-d7bdabc32940
+uuid: b4c8e03c-f632-4a09-ab6a-0b0707517e60
 langcode: en-gb
 status: true
 dependencies:
   content:
-    - 'block_content:basic:b04ffbf8-fed3-4f31-a13c-9d2ea8d4d839'
+    - 'block_content:basic:769b6c6c-084a-40bd-859d-c6639abeb09c'
   module:
     - block_content
     - system
     - user
   theme:
     - bandwise10
-id: bandwise10_frontpagebuttons
+id: bandwise10_bandwise
 theme: bandwise10
 region: content
-weight: -2
+weight: -3
 provider: null
-plugin: 'block_content:b04ffbf8-fed3-4f31-a13c-9d2ea8d4d839'
+plugin: 'block_content:769b6c6c-084a-40bd-859d-c6639abeb09c'
 settings:
-  id: 'block_content:b04ffbf8-fed3-4f31-a13c-9d2ea8d4d839'
-  label: 'Front page buttons'
-  label_display: '0'
+  id: 'block_content:769b6c6c-084a-40bd-859d-c6639abeb09c'
+  label: Bandwise
+  label_display: visible
   provider: block_content
   status: true
   info: ''
@@ -35,5 +35,4 @@ visibility:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      administrator: administrator
-      agent: agent
+      anonymous: anonymous

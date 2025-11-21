@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.field_show
     - node.type.booking
     - taxonomy.vocabulary.booking_status
+    - user.role.authenticated
   content:
     - 'taxonomy_term:booking_status:0fb83b65-c848-4c69-a063-0d4c37001032'
   module:
@@ -477,6 +478,8 @@ display:
           bef:
             general:
               autosubmit: false
+              auto_submit_sort_only: false
+              autosubmit_breakpoint: ''
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
               autosubmit_textfield_minimum_length: 3
@@ -491,10 +494,16 @@ display:
             filter:
               field_booking_status_target_id:
                 plugin_id: default
+                advanced:
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
+                  open_by_default: false
+                  field_classes: ''
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -693,7 +702,7 @@ display:
           admin_label: 'field_venue_name: Content'
           plugin_id: standard
           required: true
-      use_more: true
+      use_more: false
       use_more_always: true
       use_more_text: more
       header: {  }
@@ -706,7 +715,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_booking_status'
         - 'config:field.storage.node.field_client_name'
@@ -845,7 +854,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_booking_status'
         - 'config:field.storage.node.field_client_name'
@@ -873,6 +882,8 @@ display:
           bef:
             general:
               autosubmit: false
+              auto_submit_sort_only: false
+              autosubmit_breakpoint: ''
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
               autosubmit_textfield_minimum_length: 3
@@ -887,16 +898,23 @@ display:
                 plugin_id: bef
                 advanced:
                   sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
+                  open_by_default: false
                   is_secondary: false
                   hide_label: false
+                  field_classes: ''
                 select_all_none: true
                 select_all_none_nested: false
                 display_inline: true
+                soft_limit: 0
+                soft_limit_label_less: 'Show less'
+                soft_limit_label_more: 'Show more'
       filters:
         type:
           id: type
@@ -1026,7 +1044,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_booking_status'
         - 'config:field.storage.node.field_client_name'

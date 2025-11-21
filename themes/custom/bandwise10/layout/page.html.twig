@@ -64,14 +64,8 @@ set footer_classes = ' ' ~
     <div class="{{ b5_top_container }} d-flex">
       {{ page.nav_branding }}
 
-      {% if page.nav_main or page.nav_additional %}
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+        <div class="justify-content-md-end" id="navbarSupportedContent">
           <div class="right-hand-wrapper">
             <div class="upper-container">
               {{ page.nav_additional }}
@@ -79,10 +73,11 @@ set footer_classes = ' ' ~
             <div class="lower-container">
               {{ page.nav_main }}
             </div>
-          </div>
+            <div class="mobile-container">
+              {{ page.nav_mobile }}
+            </div>          </div>
         </div>
 
-      {% endif %}
     </div>
   </nav>
   {% endif %}

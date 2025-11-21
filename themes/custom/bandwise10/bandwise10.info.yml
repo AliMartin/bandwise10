@@ -13,6 +13,7 @@ regions:
   header: Header
   nav_branding: 'Navigation branding region'
   nav_main: 'Main navigation region'
+  nav_mobile: 'Mobile navigation region'
   nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
   breadcrumb: Breadcrumbs
   content: 'Main content'

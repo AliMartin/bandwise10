@@ -29,7 +29,7 @@
 
 # Ignore drupal core (if not versioning drupal sources)
 /core
-# /libraries
+/libraries
 /modules/contrib/*
 !/modules/contrib/.gitkeep
 !/modules/custom/
