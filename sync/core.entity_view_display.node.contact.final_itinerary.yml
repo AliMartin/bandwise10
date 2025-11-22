@@ -1,8 +1,9 @@
-uuid: 067917f5-6c48-47b2-834a-5a4367bbdb8d
+uuid: 7fbfe3fd-ad0f-45be-85ba-5487b50d789e
 langcode: en-gb
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.final_itinerary
     - field.field.node.contact.body
     - field.field.node.contact.field_address
     - field.field.node.contact.field_contact_type
@@ -16,39 +17,31 @@ dependencies:
     - telephone
     - text
     - user
-id: node.contact.default
+id: node.contact.final_itinerary
 targetEntityType: node
 bundle: contact
-mode: default
+mode: final_itinerary
 content:
   body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
   field_address:
     type: address_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_contact_type:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_email:
     type: email_mailto
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 1
     region: content
   field_google_map:
     type: link
@@ -60,7 +53,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 2
     region: content
   field_telephone:
     type: telephone_link
@@ -68,12 +61,13 @@ content:
     settings:
       title: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 5
     region: content
 hidden:
+  field_contact_type: true
   langcode: true

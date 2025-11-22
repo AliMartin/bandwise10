@@ -34,6 +34,8 @@ module:
   eca_ui: 0
   eca_workflow: 0
   editor: 0
+  entity_print: 0
+  entity_print_views: 0
   entity_reference_display: 0
   entity_reference_revisions: 0
   field: 0

@@ -11,7 +11,7 @@ _core:
 id: bandwise10_help
 theme: bandwise10
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: help_block
 settings:
