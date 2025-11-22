@@ -22,3 +22,6 @@ regions:
   footer: Footer
 libraries-override:
   bootstrap5/global-styling: false
+entity_print:
+  node:
+    all: 'bandwise10/print-styling'

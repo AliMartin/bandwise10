@@ -2,3 +2,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+print-styling:
+  css:
+    theme:
+      css/entity-print.css: {}

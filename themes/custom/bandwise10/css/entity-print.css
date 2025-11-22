@@ -1,0 +1,53 @@
+body {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.page {
+  padding: 20px;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page td img {
+  max-width: none;
+}
+
+.page .node__content .section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #444444;
+}
+
+.page .node__content h3 {
+  font-size: 28px;
+}
+
+.page .node__content .field__label {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+
+.page .node__content .field__item {
+  display: inline-block;
+}
+
+/* Not all field labels want to float */
+.page .node__content .field--name-field-address .field__label,
+.page .node__content .field--name-field-access-instructions .field__label,
+.page .node__content .field--name-field-dietary-requirements .field__label {
+  width: inherit;
+  float: inherit;
+}
+
+
+/*
+.page .field__label,
+.page .field__item,
+.page .field__items {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+*/

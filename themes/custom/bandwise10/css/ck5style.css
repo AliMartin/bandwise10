@@ -24,6 +24,8 @@
   /* rtl:begin:remove */
   /* rtl:end:remove */
   @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  /* Musician nodes */
+  /* Contact nodes */
   /*
    * Booking status colour coding
    * Note that this is currently done by term ID rather than a pretty text label
@@ -40,6 +42,7 @@
    * Booking and line-up tables
    * Hide H2 for show name so only band name is displayed
    */
+  /* And the original view "final itinerary" button */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -12330,6 +12333,16 @@ a > .ck-content code {
 .ck-content code {
   overflow-y: auto;
 }
+.ck-content .btn-primary {
+  background-color: #2f3b39;
+  border: 1px solid #2f3b39;
+  color: #ffffff;
+}
+.ck-content .btn-primary:hover {
+  background-color: #c1571c;
+  border: 1px solid #c1571c;
+  color: #ffffff;
+}
 .ck-content header {
   background-color: #3c4f5e;
   color: #ffffff;
@@ -12374,6 +12387,16 @@ a > .ck-content code {
 .ck-content #block-bandwise10-footertext {
   font-size: smaller;
   margin-bottom: 30px;
+  /*
+  a {
+    color: $white;
+    text-decoration: inherit;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  */
 }
 .ck-content #block-bandwise10-footertext .slogan {
   font-weight: 700;
@@ -12383,14 +12406,6 @@ a > .ck-content code {
 }
 .ck-content #block-bandwise10-footertext .copyright {
   margin-bottom: 10px;
-}
-.ck-content #block-bandwise10-footertext a {
-  color: #ffffff;
-  text-decoration: inherit;
-}
-.ck-content #block-bandwise10-footertext a:hover {
-  color: #ffffff;
-  text-decoration: underline;
 }
 .ck-content #ultraluminal .text {
   text-transform: uppercase;
@@ -12496,6 +12511,39 @@ a > .ck-content code {
 }
 .ck-content strong {
   font-weight: 700;
+}
+.ck-content ul.nav-tabs, .ck-content .media-library-view--widget ul.view-header {
+  justify-content: center;
+}
+.ck-content h1, .ck-content .h1 {
+  text-align: center;
+  font-size: clamp(2.5rem, 4vw + 0.5rem, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.ck-content .block-views h2, .ck-content .block-views .h2 {
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.ck-content .node-type-musician main .region-content {
+  text-align: center;
+}
+.ck-content .node-type-musician main .region-content .field--name-field-skill .field__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ck-content .node-type-musician main .region-content .field--name-field-skill .field__items .field__item {
+  margin: 0 15px;
+}
+.ck-content .node-type-contact main .region-content .field--name-field-contact-type {
+  margin-bottom: 1rem;
+}
+.ck-content .node-type-contact main .region-content .field--name-body {
+  margin-top: 1rem;
 }
 .ck-content span.booking_status {
   display: inline-block;
@@ -12619,12 +12667,120 @@ a > .ck-content code {
   font-weight: 700;
   text-decoration: underline;
 }
+.ck-content .block-views-blockfinal-itinerary-final-itinerary-btn {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.ck-content .view-final-itinerary {
+  /* Manipulate H2 so that it looks like a return to original booking button */
+  /* Only apply on Final Itinerary view mode pages */
+  /* Adjust the positioning of a few fields */
+  /* Fudge the automatic title link for the entity reference so that it looks like normal text */
+  /* And then position the automatic title link so that it looks like a regular field */
+  /* Hide the map link, home address and notes for the client as these aren't required but
+   * displayed by default, and we need these fields for the venue's directions
+   */
+  /* Tidy up spacing of last paragraph of text fields where they preceed a dividing line */
+  /* Playlists */
+  /* Requests */
+}
+.ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2::before, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2::before {
+  content: "View the original booking: ";
+  display: block;
+  font-weight: 600;
+}
+.ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2 a, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2 a {
+  background: #2f3b39;
+  color: #fff;
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+}
+.ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2 a:hover, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2 a:hover {
+  background: #c1571c;
+}
+.ck-content .view-final-itinerary .node__content div.section {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ced4da;
+  margin-bottom: 2rem;
+}
+.ck-content .view-final-itinerary .node__content div.section:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 4rem;
+}
+.ck-content .view-final-itinerary h3, .ck-content .view-final-itinerary .h3 {
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.ck-content .view-final-itinerary .field--label-inline .field__label {
+  width: 150px;
+}
+.ck-content .view-final-itinerary .field--name-field-itinerary,
+.ck-content .view-final-itinerary .field--name-field-address {
+  margin-top: 1rem;
+}
+.ck-content .view-final-itinerary .field--type-entity-reference h2, .ck-content .view-final-itinerary .field--type-entity-reference .h2 {
+  font-size: inherit;
+  line-height: 24px;
+  margin: 0;
+}
+.ck-content .view-final-itinerary .field--type-entity-reference h2 a, .ck-content .view-final-itinerary .field--type-entity-reference .h2 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.ck-content .view-final-itinerary .section.client .field--type-entity-reference > .field__label,
+.ck-content .view-final-itinerary .section.venue .field--type-entity-reference > .field__label {
+  width: 150px;
+  float: left;
+}
+.ck-content .view-final-itinerary .section.client .field--name-field-google-map,
+.ck-content .view-final-itinerary .section.client .field--name-field-address,
+.ck-content .view-final-itinerary .section.client .field--name-body {
+  display: none;
+}
+.ck-content .view-final-itinerary .section.venue .field--name-body {
+  display: none;
+}
+.ck-content .view-final-itinerary .field--name-field-itinerary .field__item p:last-of-type,
+.ck-content .view-final-itinerary .field--name-field-access-instructions .field__item p:last-of-type {
+  margin-bottom: 0;
+}
+.ck-content .view-final-itinerary .section.playlists .field--name-field-playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ck-content .view-final-itinerary .section.playlists .field--name-field-playlists .field--name-field-playlist-description {
+  font-weight: 700;
+}
+.ck-content .view-final-itinerary .section.requests .field--name-field-song-requests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ck-content .view-final-itinerary .section.requests .field--name-field-song-requests .field--name-field-request-type {
+  font-weight: 700;
+}
 .ck-content #front-page-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .ck-content #front-page-buttons .fp-button {
   display: flex;
@@ -12634,14 +12790,14 @@ a > .ck-content code {
   gap: 15px;
   width: 125px;
   height: 125px;
-  background-color: #965c33;
+  background-color: #2f3b39;
   border-radius: 12px;
   color: #ffffff;
   text-align: center;
   /* */
 }
 .ck-content #front-page-buttons .fp-button:hover {
-  background-color: #060606;
+  background-color: #c1571c;
 }
 .ck-content #front-page-buttons .fp-button a {
   color: #ffffff;
@@ -12660,7 +12816,7 @@ a > .ck-content code {
 .ck-content body.user-anonymous.node-12 main .region-content #block-bandwise10-page-title h1, .ck-content body.user-anonymous.node-12 main .region-content #block-bandwise10-page-title .h1,
 .ck-content body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title h1,
 .ck-content body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title .h1 {
-  font-size: clamp(3.5rem, 5vw + 0.5rem, 6rem);
+  font-size: clamp(3.5rem, 5vw + 0.5rem, 5rem);
 }
 
 /*# sourceMappingURL=ck5style.css.map */

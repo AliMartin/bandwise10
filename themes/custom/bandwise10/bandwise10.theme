@@ -66,3 +66,5 @@ function bandwise10_preprocess_html(array &$variables) {
     $variables['attributes']['class'][] = 'node-type-' . $type;
   }
 }
+
+
