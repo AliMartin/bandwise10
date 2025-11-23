@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
+    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_late_finish
@@ -360,7 +361,7 @@ content:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 17
     region: content
@@ -447,7 +448,7 @@ content:
     region: content
   field_playlists:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: final_itinerary
       link: ''
@@ -489,7 +490,7 @@ content:
     region: content
   field_song_requests:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: final_itinerary
       link: ''
@@ -524,6 +525,7 @@ hidden:
   field_early_arrival: true
   field_enquiry_date: true
   field_enquiry_source: true
+  field_follow_up: true
   field_invoice_name: true
   field_late_finish: true
   field_musician_dj: true

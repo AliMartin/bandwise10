@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
+    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_late_finish
@@ -70,7 +71,7 @@ third_party_settings:
       label: Booking
       parent_name: ''
       region: content
-      weight: 3
+      weight: 4
       format_type: tabs
       format_settings:
         classes: ''
@@ -313,18 +314,19 @@ content:
     weight: 0
     region: content
   field_client_name:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
+      view_mode: final_itinerary
+      link: false
     third_party_settings: {  }
     weight: 5
     region: content
   field_conversation:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: final_itinerary
       link: ''
     third_party_settings: {  }
     weight: 4
@@ -342,7 +344,7 @@ content:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 17
     region: content
@@ -388,6 +390,14 @@ content:
       time_format: 'h:i a'
     third_party_settings: {  }
     weight: 16
+    region: content
+  field_follow_up:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_invoice_name:
     type: entity_reference_label
@@ -436,7 +446,7 @@ content:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 16
     region: content
@@ -499,9 +509,9 @@ content:
     region: content
   field_playlists:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: final_itinerary
       link: ''
     third_party_settings: {  }
     weight: 5
@@ -566,7 +576,7 @@ content:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
-      view_mode: default
+      view_mode: final_itinerary
       link: ''
     third_party_settings: {  }
     weight: 13
@@ -583,7 +593,7 @@ content:
     type: entity_reference_entity_view
     label: above
     settings:
-      view_mode: full
+      view_mode: final_itinerary
       link: false
     third_party_settings: {  }
     weight: 6
@@ -599,7 +609,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
 hidden:
   body: true

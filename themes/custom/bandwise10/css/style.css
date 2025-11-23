@@ -13341,12 +13341,14 @@ code {
   overflow-y: auto;
 }
 
-.btn-primary {
+.btn-primary,
+.print__wrapper.print__wrapper--pdf a {
   background-color: #2f3b39;
   border: 1px solid #2f3b39;
   color: #ffffff;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.print__wrapper.print__wrapper--pdf a:hover {
   background-color: #c1571c;
   border: 1px solid #c1571c;
   color: #ffffff;
@@ -13628,19 +13630,7 @@ span.booking_status.flag_20 {
   color: #ffffff;
 }
 
-/*
- * Booking and line-up tables
- * Hide H2 for show name so only band name is displayed
- */
-td .vocabulary-show h2, td .vocabulary-show .h2 {
-  display: none;
-}
-
-table {
-  font-size: 12px;
-  line-height: 1.1;
-}
-
+/* Calendar */
 details.card, .view-media-library .media-library-views-form__rows .media-library-item--grid details.views-field-rendered-entity, .media-library-selection details.media-library-item.media-library-item--grid {
   border: inherit;
 }
@@ -13650,6 +13640,70 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   width: 130px;
 }
 
+/* Booking nodes on mobile */
+@media screen and (max-width: 767px) {
+  .node-type-booking main .node__content {
+    font-size: 12px;
+  }
+  .node-type-booking main .node__content .field-group-tabs-wrapper .field__label {
+    width: 100px;
+  }
+  .node-type-booking main .node__content details > .details-wrapper {
+    padding: 0.5em 0.25em;
+  }
+}
+table {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+table i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/*
+ * Booking and line-up tables
+ * Hide H2 for show name so only band name is displayed
+ */
+td .vocabulary-show h2, td .vocabulary-show .h2 {
+  display: none;
+}
+
+/* Upcoming bookings */
+.view-upcoming-bookings a span {
+  display: none;
+}
+
+/* Responsive tables */
+@media screen and (max-width: 767px) {
+  table thead {
+    display: none;
+  }
+  table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  table tr td {
+    border: 0;
+    padding: 2px 8px !important;
+  }
+  table tr td.views-field-edit-node, table tr td.views-field-field-manned-dj-service, table tr td.views-field-field-musician-dj, table tr td.views-field-field-pa {
+    display: none;
+  }
+  table tr td.views-field-field-date {
+    padding: 8px 8px 6px 8px !important;
+    font-weight: 700;
+  }
+  table tr td:last-of-type {
+    padding: 2px 8px 8px 8px !important;
+  }
+}
 .view-id-calendar ul.pager__items {
   padding: 0;
 }
@@ -13726,7 +13780,31 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
 /* And the original view "final itinerary" button */
 .block-views-blockfinal-itinerary-final-itinerary-btn {
   text-align: center;
-  margin-bottom: 2rem;
+}
+
+/* View PDF link */
+.print__wrapper.print__wrapper--pdf {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.print__wrapper.print__wrapper--pdf::before {
+  content: "Download the PDF: ";
+  display: block;
+  font-weight: 600;
+}
+
+.print__wrapper.print__wrapper--pdf a {
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .view-final-itinerary {
@@ -13748,9 +13826,10 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   gap: 5px;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 2rem;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2::before, .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2::before {
   content: "View the original booking: ";
@@ -13760,7 +13839,7 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
 .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2 a, .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2 a {
   background: #2f3b39;
   color: #fff;
-  padding: 0.65rem 1.2rem;
+  padding: 5px 15px;
   border-radius: 10px;
   text-decoration: none;
   display: block;
@@ -13869,6 +13948,18 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  #front-page-buttons .fp-button {
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  #front-page-buttons .fp-button i {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
 body.user-anonymous.node-12 main .region-content,
 body.user-anonymous.node-94 main .region-content {
   text-align: center;
@@ -13877,6 +13968,11 @@ body.user-anonymous.node-12 main .region-content #block-bandwise10-page-title h1
 body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title h1,
 body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title .h1 {
   font-size: clamp(3.5rem, 5vw + 0.5rem, 5rem);
+}
+
+.path-frontpage .block-views-blockupcoming-bookings-block-1,
+.path-frontpage .block-views-blockfollow-up-block-1 {
+  margin-bottom: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

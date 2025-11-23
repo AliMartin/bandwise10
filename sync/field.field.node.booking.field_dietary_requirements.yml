@@ -10,7 +10,7 @@ id: node.booking.field_dietary_requirements
 field_name: field_dietary_requirements
 entity_type: node
 bundle: booking
-label: 'Dietary requirements'
+label: 'Dietary allergies'
 description: "List any dietary requirements or food intolerances the band has and let the client know. Note, this information is no stored in the musician's profile for PII reasons."
 required: false
 translatable: false

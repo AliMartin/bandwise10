@@ -38,11 +38,16 @@
   /* Keen enquiry     */
   /* Postponed        */
   /* Cancelled        */
+  /* Calendar */
+  /* Booking nodes on mobile */
   /*
    * Booking and line-up tables
    * Hide H2 for show name so only band name is displayed
    */
+  /* Upcoming bookings */
+  /* Responsive tables */
   /* And the original view "final itinerary" button */
+  /* View PDF link */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -12333,12 +12338,14 @@ a > .ck-content code {
 .ck-content code {
   overflow-y: auto;
 }
-.ck-content .btn-primary {
+.ck-content .btn-primary,
+.ck-content .print__wrapper.print__wrapper--pdf a {
   background-color: #2f3b39;
   border: 1px solid #2f3b39;
   color: #ffffff;
 }
-.ck-content .btn-primary:hover {
+.ck-content .btn-primary:hover,
+.ck-content .print__wrapper.print__wrapper--pdf a:hover {
   background-color: #c1571c;
   border: 1px solid #c1571c;
   color: #ffffff;
@@ -12581,19 +12588,64 @@ a > .ck-content code {
   background-color: #060606;
   color: #ffffff;
 }
-.ck-content td .vocabulary-show h2, .ck-content td .vocabulary-show .h2 {
-  display: none;
-}
-.ck-content table {
-  font-size: 12px;
-  line-height: 1.1;
-}
 .ck-content details.card, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid details.views-field-rendered-entity, .ck-content .media-library-selection details.media-library-item.media-library-item--grid {
   border: inherit;
 }
 .ck-content .card-body .field__label, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity .field__label, .ck-content .media-library-selection .media-library-item.media-library-item--grid > div .field__label,
 .ck-content .media-library-selection .media-library-item.media-library-item--grid article .field__label {
   width: 130px;
+}
+@media screen and (max-width: 767px) {
+  .ck-content .node-type-booking main .node__content {
+    font-size: 12px;
+  }
+  .ck-content .node-type-booking main .node__content .field-group-tabs-wrapper .field__label {
+    width: 100px;
+  }
+  .ck-content .node-type-booking main .node__content details > .details-wrapper {
+    padding: 0.5em 0.25em;
+  }
+}
+.ck-content table {
+  font-size: 12px;
+  line-height: 1.1;
+}
+.ck-content .table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+.ck-content table i {
+  font-size: 16px;
+  line-height: 1;
+}
+.ck-content td .vocabulary-show h2, .ck-content td .vocabulary-show .h2 {
+  display: none;
+}
+.ck-content .view-upcoming-bookings a span {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .ck-content table thead {
+    display: none;
+  }
+  .ck-content table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .ck-content table tr td {
+    border: 0;
+    padding: 2px 8px !important;
+  }
+  .ck-content table tr td.views-field-edit-node, .ck-content table tr td.views-field-field-manned-dj-service, .ck-content table tr td.views-field-field-musician-dj, .ck-content table tr td.views-field-field-pa {
+    display: none;
+  }
+  .ck-content table tr td.views-field-field-date {
+    padding: 8px 8px 6px 8px !important;
+    font-weight: 700;
+  }
+  .ck-content table tr td:last-of-type {
+    padding: 2px 8px 8px 8px !important;
+  }
 }
 .ck-content .view-id-calendar ul.pager__items {
   padding: 0;
@@ -12669,7 +12721,28 @@ a > .ck-content code {
 }
 .ck-content .block-views-blockfinal-itinerary-final-itinerary-btn {
   text-align: center;
-  margin-bottom: 2rem;
+}
+.ck-content .print__wrapper.print__wrapper--pdf {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.ck-content .print__wrapper.print__wrapper--pdf::before {
+  content: "Download the PDF: ";
+  display: block;
+  font-weight: 600;
+}
+.ck-content .print__wrapper.print__wrapper--pdf a {
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
 }
 .ck-content .view-final-itinerary {
   /* Manipulate H2 so that it looks like a return to original booking button */
@@ -12690,9 +12763,10 @@ a > .ck-content code {
   gap: 5px;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 2rem;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2::before, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2::before {
   content: "View the original booking: ";
@@ -12702,7 +12776,7 @@ a > .ck-content code {
 .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > h2 a, .ck-content .view-final-itinerary .views-row > .node--view-mode-final-itinerary > .h2 a {
   background: #2f3b39;
   color: #fff;
-  padding: 0.65rem 1.2rem;
+  padding: 5px 15px;
   border-radius: 10px;
   text-decoration: none;
   display: block;
@@ -12809,6 +12883,18 @@ a > .ck-content code {
   font-size: 48px;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 767px) {
+  .ck-content #front-page-buttons .fp-button {
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .ck-content #front-page-buttons .fp-button i {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
 .ck-content body.user-anonymous.node-12 main .region-content,
 .ck-content body.user-anonymous.node-94 main .region-content {
   text-align: center;
@@ -12817,6 +12903,10 @@ a > .ck-content code {
 .ck-content body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title h1,
 .ck-content body.user-anonymous.node-94 main .region-content #block-bandwise10-page-title .h1 {
   font-size: clamp(3.5rem, 5vw + 0.5rem, 5rem);
+}
+.ck-content .path-frontpage .block-views-blockupcoming-bookings-block-1,
+.ck-content .path-frontpage .block-views-blockfollow-up-block-1 {
+  margin-bottom: 60px;
 }
 
 /*# sourceMappingURL=ck5style.css.map */

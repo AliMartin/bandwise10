@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
+    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_late_finish
@@ -69,7 +70,7 @@ third_party_settings:
       label: Booking
       region: content
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tabs
       format_settings:
         classes: ''
@@ -178,6 +179,7 @@ third_party_settings:
         required_fields: true
     group_conversation:
       children:
+        - field_follow_up
         - field_conversation
       label: Conversation
       region: content
@@ -342,7 +344,7 @@ content:
     third_party_settings: {  }
   field_conversation:
     type: paragraphs
-    weight: 8
+    weight: 5
     region: content
     settings:
       title: Paragraph
@@ -404,6 +406,12 @@ content:
     settings:
       enabled: false
       step: 5
+    third_party_settings: {  }
+  field_follow_up:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_invoice_name:
     type: entity_reference_autocomplete
@@ -629,7 +637,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS

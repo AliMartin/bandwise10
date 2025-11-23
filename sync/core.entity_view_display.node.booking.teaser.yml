@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.booking.field_enquiry_source
     - field.field.node.booking.field_event_type
     - field.field.node.booking.field_finish_time
+    - field.field.node.booking.field_follow_up
     - field.field.node.booking.field_invoice_name
     - field.field.node.booking.field_itinerary
     - field.field.node.booking.field_late_finish
@@ -72,6 +73,9 @@ content:
     weight: 100
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_access_instructions: true
   field_arrival_time: true
   field_audience_size: true
@@ -87,6 +91,7 @@ hidden:
   field_enquiry_source: true
   field_event_type: true
   field_finish_time: true
+  field_follow_up: true
   field_invoice_name: true
   field_itinerary: true
   field_late_finish: true

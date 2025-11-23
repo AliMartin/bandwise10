@@ -91,20 +91,7 @@ span.booking_status {
 /* Cancelled        */  span.booking_status.flag_20 {background-color: $black;    color: $white;}
 
 
-/*
- * Booking and line-up tables
- * Hide H2 for show name so only band name is displayed
- */
-
-td .vocabulary-show h2 {
-  display: none;
-}
-
-table {
-  font-size: 12px;
-  line-height: 1.1;
-}
-
+/* Calendar */
 details.card {
   border: inherit;
 }
@@ -115,4 +102,21 @@ details.card {
   }
 }
 
- 
+
+/* Booking nodes on mobile */
+
+@media screen and (max-width: 767px) {
+  .node-type-booking {
+    main .node__content {
+      font-size: 12px;
+
+      .field-group-tabs-wrapper .field__label {
+        width: 100px;
+      }
+
+      details > .details-wrapper {
+        padding: 0.5em 0.25em;
+      }
+    }
+  }
+}
