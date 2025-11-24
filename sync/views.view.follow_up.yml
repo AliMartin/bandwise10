@@ -11,7 +11,8 @@ dependencies:
     - node.type.booking
     - taxonomy.vocabulary.booking_status
     - taxonomy.vocabulary.follow_up
-    - user.role.authenticated
+    - user.role.administrator
+    - user.role.agent
   content:
     - 'taxonomy_term:booking_status:0fb83b65-c848-4c69-a063-0d4c37001032'
     - 'taxonomy_term:follow_up:4e8ceaea-137c-4fb9-9bc5-b6f4de478709'
@@ -688,7 +689,8 @@ display:
         type: role
         options:
           role:
-            authenticated: authenticated
+            administrator: administrator
+            agent: agent
       cache:
         type: tag
         options: {  }

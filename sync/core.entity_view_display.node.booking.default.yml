@@ -90,7 +90,7 @@ third_party_settings:
       weight: 24
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'show enquiry'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -118,7 +118,7 @@ third_party_settings:
       weight: 23
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section show'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -133,7 +133,7 @@ third_party_settings:
       weight: 25
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section client'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -149,7 +149,7 @@ third_party_settings:
       weight: 26
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section venue'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -167,7 +167,7 @@ third_party_settings:
       weight: 27
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section invoice'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -189,7 +189,7 @@ third_party_settings:
       weight: 28
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section band'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -205,7 +205,7 @@ third_party_settings:
       weight: 29
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section rider'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -220,7 +220,7 @@ third_party_settings:
       weight: 30
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section requests'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -235,7 +235,7 @@ third_party_settings:
       weight: 31
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section playlist'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -250,7 +250,7 @@ third_party_settings:
       weight: 32
       format_type: tab
       format_settings:
-        classes: ''
+        classes: 'section conversation'
         show_empty_fields: true
         id: ''
         label_as_html: false
@@ -352,7 +352,7 @@ content:
     type: boolean
     label: inline
     settings:
-      format: unicode-yes-no
+      format: yes-no
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
@@ -418,7 +418,7 @@ content:
     type: boolean
     label: inline
     settings:
-      format: unicode-yes-no
+      format: yes-no
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
@@ -428,7 +428,7 @@ content:
     type: boolean
     label: inline
     settings:
-      format: unicode-yes-no
+      format: yes-no
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
@@ -574,7 +574,7 @@ content:
     region: content
   field_song_requests:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: final_itinerary
       link: ''

@@ -40,6 +40,8 @@
   /* Cancelled        */
   /* Calendar */
   /* Booking nodes on mobile */
+  /* Booking nodes on desktop */
+  /* User login and other screens */
   /*
    * Booking and line-up tables
    * Hide H2 for show name so only band name is displayed
@@ -12605,6 +12607,51 @@ a > .ck-content code {
   .ck-content .node-type-booking main .node__content details > .details-wrapper {
     padding: 0.5em 0.25em;
   }
+}
+.ck-content .node-type-booking main article > .node__content {
+  /* Entity reference field h2 for client and venues */
+  /* Put some spacing in some fields */
+}
+.ck-content .node-type-booking main article > .node__content > div.field .field__label {
+  width: 200px;
+}
+.ck-content .node-type-booking main article > .node__content details.section .field__label {
+  width: 130px;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-access-instructions .field__label {
+  white-space: pre;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-client-name > .field__label,
+.ck-content .node-type-booking main article > .node__content .field--name-field-venue-name > .field__label {
+  float: left;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-client-name > .field__item h2, .ck-content .node-type-booking main article > .node__content .field--name-field-client-name > .field__item .h2,
+.ck-content .node-type-booking main article > .node__content .field--name-field-venue-name > .field__item h2,
+.ck-content .node-type-booking main article > .node__content .field--name-field-venue-name > .field__item .h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0 0 5px 0;
+  position: relative;
+  top: 2px;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-itinerary,
+.ck-content .node-type-booking main article > .node__content .field--name-field-address {
+  margin-top: 1rem;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-song-requests > .field__item,
+.ck-content .node-type-booking main article > .node__content .field--name-field-playlists > .field__item {
+  margin-bottom: 1rem;
+}
+.ck-content .node-type-booking main article > .node__content .field--name-field-song-requests .field--name-field-request-type,
+.ck-content .node-type-booking main article > .node__content .field--name-field-song-requests .field--name-field-playlist-description,
+.ck-content .node-type-booking main article > .node__content .field--name-field-playlists .field--name-field-request-type,
+.ck-content .node-type-booking main article > .node__content .field--name-field-playlists .field--name-field-playlist-description {
+  font-weight: 700;
+}
+.ck-content .path-user main .region-content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .ck-content table {
   font-size: 12px;

@@ -8,6 +8,7 @@ dependencies:
     - node.type.musician
   module:
     - node
+    - system
 id: agent
 label: Agent
 weight: -6
@@ -37,3 +38,4 @@ permissions:
   - 'view booking revisions'
   - 'view contact revisions'
   - 'view musician revisions'
+  - 'view the administration theme'

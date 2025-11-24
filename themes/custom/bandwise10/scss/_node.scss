@@ -104,7 +104,6 @@ details.card {
 
 
 /* Booking nodes on mobile */
-
 @media screen and (max-width: 767px) {
   .node-type-booking {
     main .node__content {
@@ -118,5 +117,68 @@ details.card {
         padding: 0.5em 0.25em;
       }
     }
+  }
+}
+
+
+/* Booking nodes on desktop */
+.node-type-booking {
+  main article > .node__content {
+
+    > div.field .field__label {
+      width: 200px;
+    }
+
+    details.section .field__label {
+      width: 130px;
+    }
+
+    .field--name-field-access-instructions .field__label {
+      white-space: pre;
+    }
+
+    /* Entity reference field h2 for client and venues */
+    .field--name-field-client-name,
+    .field--name-field-venue-name {
+      > .field__label {
+        float: left;
+      }
+      > .field__item {
+        h2 {
+          font-size: inherit;
+          font-weight: inherit;
+          margin: 0 0 5px 0;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+
+    /* Put some spacing in some fields */
+    .field--name-field-itinerary,
+    .field--name-field-address {
+      margin-top: 1rem;
+    }
+
+    .field--name-field-song-requests,
+    .field--name-field-playlists {
+      > .field__item {
+        margin-bottom: 1rem;
+      }
+      .field--name-field-request-type,
+      .field--name-field-playlist-description {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+
+/* User login and other screens */
+.path-user {
+  main .region-content {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

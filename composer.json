@@ -47,6 +47,7 @@
         "drupal/gin": "^4.1",
         "drupal/menu_item_role_access": "^2.4",
         "drupal/paragraphs": "^1.19",
+        "drupal/redirect_after_login": "^3.0",
         "drupal/responsive_favicons": "^4.0",
         "drupal/responsive_menu": "^4.4",
         "drupal/time_field": "^2.2",
