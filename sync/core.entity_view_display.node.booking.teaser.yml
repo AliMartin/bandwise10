@@ -32,6 +32,8 @@ dependencies:
     - field.field.node.booking.field_musician_keyboards
     - field.field.node.booking.field_musician_sound
     - field.field.node.booking.field_musician_vocals
+    - field.field.node.booking.field_noise_limiter
+    - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
@@ -103,6 +105,8 @@ hidden:
   field_musician_keyboards: true
   field_musician_sound: true
   field_musician_vocals: true
+  field_noise_limiter: true
+  field_noise_limiter_advice: true
   field_pa: true
   field_payment_history: true
   field_playlists: true

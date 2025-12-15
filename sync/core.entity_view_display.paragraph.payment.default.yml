@@ -14,7 +14,7 @@ mode: default
 content:
   field_payment_amount:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -25,9 +25,9 @@ content:
     region: content
   field_payment_paid:
     type: boolean
-    label: above
+    label: inline
     settings:
-      format: default
+      format: yes-no
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
@@ -35,10 +35,13 @@ content:
     region: content
   field_payment_type:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

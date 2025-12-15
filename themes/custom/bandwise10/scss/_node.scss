@@ -133,6 +133,11 @@ details.card {
       width: 130px;
     }
 
+    /* Wrap the text field for the sound advice */
+    .field--name-field-noise-limiter-advice .field__item {
+      margin-left: 130px;
+    }
+
     .field--name-field-access-instructions .field__label {
       white-space: pre;
     }
@@ -170,6 +175,27 @@ details.card {
         font-weight: $font-weight-bold;
       }
     }
+
+    /* Invoicing section */
+    details.invoice {
+      .field__label {
+        width: 160px;
+      }
+
+      .field--name-field-payment-history {
+        margin: 1rem 0;
+        > .field__label {
+          font-weight: 400;
+          font-size: larger;
+          margin-bottom: 1rem;
+        }
+        > .field__items > .field__item {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+
   }
 }
 

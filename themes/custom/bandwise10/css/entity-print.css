@@ -67,6 +67,11 @@ body {
   display: block;
 }
 
+.page .node__content .field--name-field-noise-limiter-advice {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Entity reference fields are constructed in an annoying way so we will 
  * simply remove the field label and change the presentation */
 .page .node__content .client .field--name-field-client-name > .field__label,

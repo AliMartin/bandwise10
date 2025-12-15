@@ -31,6 +31,8 @@ dependencies:
     - field.field.node.booking.field_musician_keyboards
     - field.field.node.booking.field_musician_sound
     - field.field.node.booking.field_musician_vocals
+    - field.field.node.booking.field_noise_limiter
+    - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
@@ -110,6 +112,8 @@ third_party_settings:
         - field_late_finish
         - field_audience_size
         - field_pa
+        - field_noise_limiter
+        - field_noise_limiter_advice
         - field_manned_dj_service
         - field_itinerary
       label: Show
@@ -232,7 +236,7 @@ third_party_settings:
       label: Playlist
       parent_name: group_booking
       region: content
-      weight: 31
+      weight: 33
       format_type: tab
       format_settings:
         classes: 'section playlist'
@@ -247,7 +251,7 @@ third_party_settings:
       label: Conversation
       parent_name: group_booking
       region: content
-      weight: 32
+      weight: 34
       format_type: tab
       format_settings:
         classes: 'section conversation'
@@ -271,7 +275,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 10
     region: content
   field_arrival_time:
     type: time_formatter
@@ -287,7 +291,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 18
+    weight: 17
     region: content
   field_band_size:
     type: entity_reference_label
@@ -346,7 +350,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 17
+    weight: 34
     region: content
   field_early_arrival:
     type: boolean
@@ -356,7 +360,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 13
+    weight: 12
     region: content
   field_enquiry_date:
     type: datetime_default
@@ -365,7 +369,7 @@ content:
       timezone_override: ''
       format_type: long
     third_party_settings: {  }
-    weight: 3
+    weight: 10
     region: content
   field_enquiry_source:
     type: entity_reference_label
@@ -373,7 +377,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 9
     region: content
   field_event_type:
     type: entity_reference_label
@@ -389,7 +393,7 @@ content:
     settings:
       time_format: 'h:i a'
     third_party_settings: {  }
-    weight: 16
+    weight: 15
     region: content
   field_follow_up:
     type: entity_reference_label
@@ -422,7 +426,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 17
+    weight: 16
     region: content
   field_manned_dj_service:
     type: boolean
@@ -432,7 +436,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_musician_bass:
     type: entity_reference_label
@@ -440,7 +444,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_musician_dj:
     type: entity_reference_label
@@ -448,7 +452,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_musician_drums:
     type: entity_reference_label
@@ -456,7 +460,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 10
     region: content
   field_musician_guitar:
     type: entity_reference_label
@@ -464,7 +468,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_musician_keyboards:
     type: entity_reference_label
@@ -472,7 +476,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_musician_sound:
     type: entity_reference_label
@@ -480,7 +484,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_musician_vocals:
     type: entity_reference_label
@@ -490,13 +494,30 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_noise_limiter:
+    type: boolean
+    label: inline
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_noise_limiter_advice:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
   field_pa:
     type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    weight: 19
+    weight: 18
     region: content
   field_payment_history:
     type: entity_reference_revisions_entity_view
@@ -505,7 +526,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 10
     region: content
   field_playlists:
     type: entity_reference_revisions_entity_view
@@ -518,24 +539,24 @@ content:
     region: content
   field_quote_amount:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 7
+    weight: 9
     region: content
   field_quote_link:
     type: link
-    label: above
+    label: inline
     settings:
-      trim_length: 80
+      trim_length: 40
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: nofollow
+      target: _blank
     third_party_settings: {  }
     weight: 6
     region: content
@@ -544,7 +565,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 16
+    weight: 33
     region: content
   field_setup_time:
     type: time_formatter
@@ -552,7 +573,7 @@ content:
     settings:
       time_format: 'h:i a'
     third_party_settings: {  }
-    weight: 14
+    weight: 13
     region: content
   field_show:
     type: cshs_full_hierarchy
@@ -587,7 +608,7 @@ content:
     settings:
       time_format: 'h:i a'
     third_party_settings: {  }
-    weight: 15
+    weight: 14
     region: content
   field_venue_name:
     type: entity_reference_entity_view
@@ -596,7 +617,7 @@ content:
       view_mode: final_itinerary
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 9
     region: content
   field_waiting_status:
     type: entity_reference_label

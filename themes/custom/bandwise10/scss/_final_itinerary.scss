@@ -92,6 +92,11 @@
     margin-top: 1rem;
   }
 
+  /* Wrap the text field for the sound advice */
+  .field--name-field-noise-limiter-advice .field__item {
+    margin-left: 150px;
+  }
+
   /* Fudge the automatic title link for the entity reference so that it looks like normal text */ 
   .field--type-entity-reference h2 {
     font-size: inherit;

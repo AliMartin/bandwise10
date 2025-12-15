@@ -31,6 +31,8 @@ dependencies:
     - field.field.node.booking.field_musician_keyboards
     - field.field.node.booking.field_musician_sound
     - field.field.node.booking.field_musician_vocals
+    - field.field.node.booking.field_noise_limiter
+    - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
@@ -145,6 +147,8 @@ third_party_settings:
         - field_late_finish
         - field_audience_size
         - field_pa
+        - field_noise_limiter
+        - field_noise_limiter_advice
         - field_manned_dj_service
         - field_itinerary
       label: Show
@@ -272,7 +276,7 @@ third_party_settings:
       label: 'Line up'
       region: content
       parent_name: group_band
-      weight: 26
+      weight: 29
       format_type: html_element
       format_settings:
         classes: band-line-up
@@ -294,7 +298,7 @@ mode: default
 content:
   field_access_instructions:
     type: text_textarea
-    weight: 44
+    weight: 46
     region: content
     settings:
       rows: 5
@@ -316,7 +320,7 @@ content:
     third_party_settings: {  }
   field_band_size:
     type: options_select
-    weight: 25
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -344,7 +348,7 @@ content:
     third_party_settings: {  }
   field_conversation:
     type: paragraphs
-    weight: 5
+    weight: 49
     region: content
     settings:
       title: Paragraph
@@ -370,7 +374,7 @@ content:
     third_party_settings: {  }
   field_dietary_requirements:
     type: options_buttons
-    weight: 26
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -383,7 +387,7 @@ content:
     third_party_settings: {  }
   field_enquiry_date:
     type: datetime_default
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -409,7 +413,7 @@ content:
     third_party_settings: {  }
   field_follow_up:
     type: options_select
-    weight: 4
+    weight: 48
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -425,7 +429,7 @@ content:
     third_party_settings: {  }
   field_itinerary:
     type: text_textarea
-    weight: 23
+    weight: 25
     region: content
     settings:
       rows: 5
@@ -440,44 +444,44 @@ content:
     third_party_settings: {  }
   field_manned_dj_service:
     type: boolean_checkbox
-    weight: 22
+    weight: 24
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_musician_bass:
     type: options_select
-    weight: 27
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_dj:
     type: options_select
-    weight: 31
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_drums:
     type: options_select
-    weight: 26
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_guitar:
     type: options_select
-    weight: 28
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_keyboards:
     type: options_select
-    weight: 29
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   field_musician_sound:
     type: options_select
-    weight: 30
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -487,6 +491,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_noise_limiter:
+    type: boolean_checkbox
+    weight: 22
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_noise_limiter_advice:
+    type: string_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
   field_pa:
     type: options_select
     weight: 21
@@ -495,7 +514,7 @@ content:
     third_party_settings: {  }
   field_payment_history:
     type: paragraphs
-    weight: 45
+    weight: 47
     region: content
     settings:
       title: Paragraph
@@ -531,14 +550,14 @@ content:
     third_party_settings: {  }
   field_quote_amount:
     type: number
-    weight: 44
+    weight: 46
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_quote_link:
     type: link_default
-    weight: 43
+    weight: 45
     region: content
     settings:
       placeholder_url: ''
@@ -546,7 +565,7 @@ content:
     third_party_settings: {  }
   field_rider:
     type: text_textarea
-    weight: 25
+    weight: 28
     region: content
     settings:
       rows: 5
@@ -572,6 +591,7 @@ content:
       hierarchy_depth: 0
       required_depth: 0
       none_label: '- Please select -'
+      allow_unpublished: false
     third_party_settings: {  }
   field_show_length:
     type: options_select
@@ -607,7 +627,7 @@ content:
     third_party_settings: {  }
   field_venue_name:
     type: entity_reference_autocomplete
-    weight: 43
+    weight: 45
     region: content
     settings:
       match_operator: CONTAINS

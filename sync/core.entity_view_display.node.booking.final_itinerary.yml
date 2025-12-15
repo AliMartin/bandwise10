@@ -32,6 +32,8 @@ dependencies:
     - field.field.node.booking.field_musician_keyboards
     - field.field.node.booking.field_musician_sound
     - field.field.node.booking.field_musician_vocals
+    - field.field.node.booking.field_noise_limiter
+    - field.field.node.booking.field_noise_limiter_advice
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
@@ -111,6 +113,8 @@ third_party_settings:
         - field_finish_time
         - field_audience_size
         - field_pa
+        - field_noise_limiter
+        - field_noise_limiter_advice
         - field_manned_dj_service
         - field_itinerary
       label: Show
@@ -334,7 +338,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
   field_band_size:
     type: entity_reference_label
@@ -391,7 +395,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_manned_dj_service:
     type: boolean
@@ -401,7 +405,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_musician_bass:
     type: entity_reference_label
@@ -443,13 +447,30 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_noise_limiter:
+    type: boolean
+    label: inline
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_noise_limiter_advice:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_pa:
     type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 10
     region: content
   field_playlists:
     type: entity_reference_revisions_entity_view
