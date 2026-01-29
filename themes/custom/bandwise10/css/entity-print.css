@@ -54,6 +54,7 @@ body {
 .page .node__content .field--name-field-itinerary .field__label,
 .page .node__content .field--name-field-access-instructions .field__label,
 .page .node__content .field--name-field-rider .field__label,
+.page .node__content .field--name-field-production-notes .field__label,
 .page .node__content .field--name-field-dietary-requirements .field__label {
   width: inherit;
   float: inherit;
@@ -63,6 +64,7 @@ body {
 .page .node__content .field--name-field-itinerary .field__item,
 .page .node__content .field--name-field-access-instructions .field__item,
 .page .node__content .field--name-field-rider .field__item,
+.page .node__content .field--name-field-production-notes .field__item,
 .page .node__content .field--name-field-dietary-requirements .field__item {
   display: block;
 }
