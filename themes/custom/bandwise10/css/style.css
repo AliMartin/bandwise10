@@ -12697,6 +12697,9 @@ a[class=button] {
   min-width: 5rem;
 }
 
+input.form-text {
+  margin-top: 0;
+}
 input[type=search] {
   box-sizing: border-box;
 }
@@ -12872,7 +12875,13 @@ footer.footer-dark a:hover {
 }
 footer .region-footer {
   display: flex;
-  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 767px) {
+  footer .region-footer {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .region-sidebar-first,
@@ -12894,6 +12903,11 @@ footer .region-footer {
   flex-shrink: 0;
 }
 
+@media (min-width: 992px) {
+  .region-nav-additional {
+    display: flex;
+  }
+}
 .tabs-primary {
   margin: 1rem 0;
 }
@@ -12960,6 +12974,14 @@ a.tabledrag-handle .handle {
 
 table {
   caption-side: unset;
+}
+
+.admin-dblog .table .icon {
+  background-color: var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg, var(--bs-table-bg))));
+}
+.admin-dblog .table > :not(caption) > * > * {
+  box-shadow: unset;
+  background-color: var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg, var(--bs-table-bg))));
 }
 
 .progress {
@@ -13658,6 +13680,7 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
   /* Entity reference field h2 for client and venues */
   /* Put some spacing in some fields */
   /* Invoicing section */
+  /* Production notes section */
 }
 .node-type-booking main article > .node__content > div.field .field__label {
   width: 200px;
@@ -13711,6 +13734,9 @@ details.card, .view-media-library .media-library-views-form__rows .media-library
 }
 .node-type-booking main article > .node__content details.invoice .field--name-field-payment-history > .field__items > .field__item {
   margin-bottom: 1rem;
+}
+.node-type-booking main article > .node__content details.production .field__label {
+  width: 160px;
 }
 
 /* User login and other screens */

@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
+    - field.field.node.booking.field_production_notes
     - field.field.node.booking.field_quote_amount
     - field.field.node.booking.field_quote_link
     - field.field.node.booking.field_rider
@@ -70,6 +71,7 @@ third_party_settings:
         - group_requests
         - group_playlist
         - group_conversation
+        - group_production
       label: Booking
       parent_name: ''
       region: content
@@ -236,7 +238,7 @@ third_party_settings:
       label: Playlist
       parent_name: group_booking
       region: content
-      weight: 33
+      weight: 31
       format_type: tab
       format_settings:
         classes: 'section playlist'
@@ -251,11 +253,26 @@ third_party_settings:
       label: Conversation
       parent_name: group_booking
       region: content
-      weight: 34
+      weight: 32
       format_type: tab
       format_settings:
         classes: 'section conversation'
         show_empty_fields: true
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+    group_production:
+      children:
+        - field_production_notes
+      label: Production
+      parent_name: group_booking
+      region: content
+      weight: 33
+      format_type: tab
+      format_settings:
+        classes: 'section production'
+        show_empty_fields: false
         id: ''
         label_as_html: false
         formatter: closed
@@ -536,6 +553,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_production_notes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_quote_amount:
     type: number_decimal

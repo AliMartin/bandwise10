@@ -11751,6 +11751,9 @@ a > .ck-content code {
 .ck-content .form-select {
   min-width: 5rem;
 }
+.ck-content input.form-text {
+  margin-top: 0;
+}
 .ck-content input[type=search] {
   box-sizing: border-box;
 }
@@ -11907,7 +11910,13 @@ a > .ck-content code {
 }
 .ck-content footer .region-footer {
   display: flex;
-  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 767px) {
+  .ck-content footer .region-footer {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .ck-content .region-sidebar-first,
 .ck-content .region-sidebar-second,
@@ -11924,6 +11933,11 @@ a > .ck-content code {
 .ck-content .region-nav-branding,
 .ck-content .region-nav-additional {
   flex-shrink: 0;
+}
+@media (min-width: 992px) {
+  .ck-content .region-nav-additional {
+    display: flex;
+  }
 }
 .ck-content .tabs-primary {
   margin: 1rem 0;
@@ -11988,6 +12002,13 @@ a > .ck-content code {
 }
 .ck-content table {
   caption-side: unset;
+}
+.ck-content .admin-dblog .table .icon {
+  background-color: var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg, var(--bs-table-bg))));
+}
+.ck-content .admin-dblog .table > :not(caption) > * > * {
+  box-shadow: unset;
+  background-color: var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg, var(--bs-table-bg))));
 }
 .ck-content .progress {
   display: block;
@@ -12613,6 +12634,7 @@ a > .ck-content code {
   /* Entity reference field h2 for client and venues */
   /* Put some spacing in some fields */
   /* Invoicing section */
+  /* Production notes section */
 }
 .ck-content .node-type-booking main article > .node__content > div.field .field__label {
   width: 200px;
@@ -12666,6 +12688,9 @@ a > .ck-content code {
 }
 .ck-content .node-type-booking main article > .node__content details.invoice .field--name-field-payment-history > .field__items > .field__item {
   margin-bottom: 1rem;
+}
+.ck-content .node-type-booking main article > .node__content details.production .field__label {
+  width: 160px;
 }
 .ck-content .path-user main .region-content {
   max-width: 700px;

@@ -37,6 +37,7 @@ dependencies:
     - field.field.node.booking.field_pa
     - field.field.node.booking.field_payment_history
     - field.field.node.booking.field_playlists
+    - field.field.node.booking.field_production_notes
     - field.field.node.booking.field_quote_amount
     - field.field.node.booking.field_quote_link
     - field.field.node.booking.field_rider
@@ -110,6 +111,7 @@ hidden:
   field_pa: true
   field_payment_history: true
   field_playlists: true
+  field_production_notes: true
   field_quote_amount: true
   field_quote_link: true
   field_rider: true
