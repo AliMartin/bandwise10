@@ -13492,6 +13492,15 @@ header nav ul.dropdown-menu li.nav-item a:hover, header nav ul.dropdown-menu li.
   border-bottom: 1px solid #3c4f5e;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header nav ul.navbar-nav li.nav-item {
+    font-size: 15px;
+  }
+  header nav ul.navbar-nav li.nav-item a,
+header nav ul.navbar-nav li.nav-item span.nav-link {
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 991px) {
   .upper-container,
 .lower-container {

@@ -12484,6 +12484,15 @@ a > .ck-content code {
   color: #3c4f5e;
   border-bottom: 1px solid #3c4f5e;
 }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .ck-content header nav ul.navbar-nav li.nav-item {
+    font-size: 15px;
+  }
+  .ck-content header nav ul.navbar-nav li.nav-item a,
+.ck-content header nav ul.navbar-nav li.nav-item span.nav-link {
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 991px) {
   .ck-content .upper-container,
 .ck-content .lower-container {
